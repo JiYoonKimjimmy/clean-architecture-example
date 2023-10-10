@@ -11,11 +11,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 class GetAccountBalanceService implements GetAccountBalanceQuery {
 
-	private final LoadAccountPort loadAccountPort;
+    private final LoadAccountPort loadAccountPort;
 
-	@Override
-	public Money getAccountBalance(AccountId accountId) {
-		return loadAccountPort.loadAccount(accountId, LocalDateTime.now())
-				.calculateBalance();
-	}
+    @Override
+    public Money getAccountBalance(AccountId accountId) {
+        return loadAccountPort.loadAccount(accountId, LocalDateTime.now())
+                .calculateBalance();
+    }
 }

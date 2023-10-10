@@ -7,5 +7,6 @@ import io.reflectoring.buckpal.account.domain.Account.AccountId;
 
 public interface LoadAccountPort {
 
-	Account loadAccount(AccountId accountId, LocalDateTime baselineDate);
+    Account loadAccount(AccountId accountId, LocalDateTime baselineDate);
+
 }
